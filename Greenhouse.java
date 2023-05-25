@@ -26,7 +26,7 @@ public class Greenhouse extends Environment {
     public boolean executeAction(String agName, Structure action) {
         logger.info("executing: "+action+", but not implemented!");
         if (true) { // you may improve this condition
-             informAgsEnvironmentChanged();
+             informAgsEnvironmentChanged();                          Literal percept = Literal.parseLiteral("percept(32)");             ((Environment) getEnvironmentInfraTier()).addPercept("master", percept);
         }
         return true; // the action was executed with success
     }
