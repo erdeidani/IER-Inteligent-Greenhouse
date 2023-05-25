@@ -15,7 +15,7 @@ public class Greenhouse extends Environment {
     public void init(String[] args) {
         super.init(args);
         try {
-			addPercept(ASSyntax.parseLiteral("percept(demo)"));									//addPercept(ASSyntax.parseLiteral("percept(32)"));
+			addPercept(ASSyntax.parseLiteral("percept(demo)"));												//Literal percept = Literal.parseLiteral("percept(32)");			Literal percept = ASSyntax.createLiteral("percept", ASSyntax.createNumber(32));			            addPercept("master", percept);            System.out.println(getPercepts("master"));			//addPercept(ASSyntax.parseLiteral("percept(32)"));
 			
 		} catch (ParseException e) {
 			e.printStackTrace();
@@ -25,7 +25,7 @@ public class Greenhouse extends Environment {
     @Override
     public boolean executeAction(String agName, Structure action) {
         logger.info("executing: "+action+", but not implemented!");
-        if (true) { // you may improve this condition        	Literal percept = Literal.parseLiteral("percept(32)");            addPercept("master", percept);            System.out.println(getPercepts("master"));        	        	
+        if (true) { // you may improve this condition        	        	        	
              informAgsEnvironmentChanged();                          
         }
         return true; // the action was executed with success
