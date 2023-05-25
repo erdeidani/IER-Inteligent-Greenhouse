@@ -14,8 +14,6 @@ MAS intelligentGreenhouse {
 
     infrastructure: Local
 
-    environment: Greenhouse
-
     agents: sample_agent;
         master;
 
