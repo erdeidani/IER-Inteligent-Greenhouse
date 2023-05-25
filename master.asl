@@ -1,8 +1,6 @@
 !start.
++percept(parameter).
 
-+!start : true <- .print("hello world.");
-					.print("kettes print").
++!start : true <- .print("hello world.").
 					
-+percept(parameter) <- .print("számot kaptam: %s", parameter).
-				
-				
++percept(parameter) <- .print(parameter).
