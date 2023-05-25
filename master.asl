@@ -1,5 +1,4 @@
 !start.
-!zsatar.
 
-+!start : true <- .print("hello world.");
-.print("szióka").
++!start : true <- .print("hello world.").
+					.print("kettes print")
