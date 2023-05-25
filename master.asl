@@ -1,4 +1,4 @@
 !start.
 
-+!start : true <- .print("hello world.").
-					.print("kettes print")
++!start : true <- .print("hello world.");
+					.print("kettes print").
