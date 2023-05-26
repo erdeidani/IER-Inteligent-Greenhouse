@@ -18,5 +18,5 @@
 	<classpathentry kind="lib" path="C:/Users/rideg/Downloads/jason-3.1/libs/javax.json-api-1.1.4.jar"/>
 	<classpathentry kind="lib" path="C:/Users/rideg/Downloads/jason-3.1/libs/jedit.jar"/>
 	<classpathentry kind="lib" path="C:/Users/rideg/Downloads/jason-3.1/libs/SideKick.jar"/>
-	<classpathentry kind="output" path="bin/classes"/>
+	<classpathentry kind="output" path=""/>
 </classpath>
