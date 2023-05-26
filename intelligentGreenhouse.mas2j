@@ -14,9 +14,10 @@ MAS intelligentGreenhouse {
 
     infrastructure: Local
 
-    environment: Greenhouse
+    environment: Example
 
-    agents: sample_agent;
-        master;
+    agents: clau;
+    		para;
+        
 
 }
