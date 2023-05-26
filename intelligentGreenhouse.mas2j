@@ -16,7 +16,8 @@ MAS intelligentGreenhouse {
 
     environment: Greenhouse
 
-    agents: sample_agent;
+    agents:
         master;
+        temperatureAgent;
 
 }
