@@ -16,8 +16,7 @@ MAS intelligentGreenhouse {
 
     environment: Example
 
-    agents: clau;
-    		para;
+    agents: temp;
         
 
 }
