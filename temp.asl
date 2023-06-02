@@ -1,4 +1,4 @@
-
+/*
 !temp_reg.
 
 +!temp_reg: cold <- .print("heat"); !heat.
@@ -11,3 +11,4 @@
 			.print("ideal temperature reached, restarting ... ");
 			.wait(2000); 
 			!temp_reg.
+*/
