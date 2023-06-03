@@ -1,4 +1,4 @@
-
+/*
 !water_regulation.
 
 +!water_regulation: dry <- .print("water"); !water.
@@ -6,3 +6,4 @@
 
 +!water <- water; .wait(200); !water_regulation.
 +!moist <- moist; .wait(2000); !water_regulation.
+*/

@@ -1,4 +1,4 @@
-/*
+
 !temp_reg.
 
 +!temp_reg: cold <- .print("heat"); !heat.
@@ -7,8 +7,4 @@
 
 +!heat <-  	 increase; .wait(200); !temp_reg.
 +!cool <-  	 decrease; .wait(200); !temp_reg.
-+!good <-  	 restart; 
-			.print("ideal temperature reached, restarting ... ");
-			.wait(2000); 
-			!temp_reg.
-*/
++!good <-  	 .print("ideal temperature, resting"); .wait(1000); restart; !temp_reg.
