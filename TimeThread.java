@@ -1,4 +1,3 @@
-
 public class TimeThread extends Thread {
 
 	public static int water = 0;
@@ -6,7 +5,7 @@ public class TimeThread extends Thread {
 	public static int humidity = 0;
 	public static int time = 0;
 
-	private static int MAX_TIME = 48;
+	public final static int MAX_TIME = 48;
 
 	private static int MAX_WATER = 10;
 	private static int MIN_WATER = 0;
@@ -14,32 +13,61 @@ public class TimeThread extends Thread {
 	private static int MAX_TEMP = 40;
 	private static int MIN_TEMP = -2;
 
-	private static int MAX_HUMY = 96;
-	private static int MIN_HUMY = 0;
+	private static int MAX_HUMY = 60;
+	private static int MIN_HUMY = 30;
+
+	private Time day = Time.DayTime;;
+	public static boolean open = false;
 
 	public void run() {
-		
-        while (!Thread.currentThread().isInterrupted()) {
-        	try {
-    			Thread.sleep(1000);
-    		} catch (InterruptedException e) {
-    			// TODO Auto-generated catch block
-    			e.printStackTrace();
-    		}{}
 
-    		setWater((--water));
-    		setTemperature((--temperature));
-    		setHumidity((++humidity));
+		while (!Thread.currentThread().isInterrupted()) {
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 
-    		if (time < MAX_TIME) {
-    			time++;
-    		} else {
-    			time = 0;
-    		}
-    		//System.out.println("time: " + time);
-    		//System.out.println("temp: " + temperature);
-        }
-		
+			// Simulation of day and night time
+			if (day == Time.DayTime) {
+				setWater((water - 2));
+				if (open) {
+					setHumidity(humidity - 1);
+				} else {
+					setTemperature((++temperature));
+					setHumidity(humidity + 2);
+				}
+
+			} else { //nighttime
+				setWater((--water));
+				if (open) {
+					setTemperature((temperature-1));
+					System.out.println("HŐMÉRSÉKLET CSÖKKENÉS");
+					setHumidity(humidity - 1);
+				} else {
+					setHumidity(humidity + 2);
+				}
+			}
+
+			if (time < MAX_TIME) {
+				time++;
+			} else {
+				time = 0;
+			}
+			if (time <= (MAX_TIME / 2)) {
+				day = Time.DayTime;
+				System.out.println("It's daytime");
+			} else {
+				day = Time.NightTime;
+				System.out.println("It's nightTime");
+			}
+			// System.out.println("time: " + time);
+			// System.out.println("temp: " + temperature);
+			
+
+		}
+
 	}
 
 	// sets the attribute if it's between the boundaries, gives back the actually
@@ -76,16 +104,24 @@ public class TimeThread extends Thread {
 		}
 		return humidity;
 	}
-	
-	int increaseTemp(){
+
+	int increaseTemp() {
 		setTemperature(++temperature);
 		return temperature;
 	}
-	
-	int decreaseTemp(){
+
+	int decreaseTemp() {
 		setTemperature(--temperature);
 		return temperature;
 	}
-	
 
+	int increaseWater() {
+		setTemperature(++water);
+		return water;
+	}
+
+	int decreaseWater() {
+		setTemperature(--water);
+		return water;
+	}
 }
