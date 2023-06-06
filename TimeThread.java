@@ -5,7 +5,7 @@ public class TimeThread extends Thread {
 	public static int humidity = 0;
 	public static int time = 0;
 
-	public final static int MAX_TIME = 48;
+	public final static int MAX_TIME = 10;
 
 	private static int MAX_WATER = 10;
 	private static int MIN_WATER = 0;
@@ -42,7 +42,7 @@ public class TimeThread extends Thread {
 			} else { //nighttime
 				setWater((--water));
 				if (open) {
-					setTemperature((temperature-1));
+					decreaseTemp();
 					System.out.println("HŐMÉRSÉKLET CSÖKKENÉS");
 					setHumidity(humidity - 1);
 				} else {
@@ -116,12 +116,12 @@ public class TimeThread extends Thread {
 	}
 
 	int increaseWater() {
-		setTemperature(++water);
+		setWater(++water);
 		return water;
 	}
 
 	int decreaseWater() {
-		setTemperature(--water);
+		setWater(--water);
 		return water;
 	}
 }

@@ -5,7 +5,7 @@
 +!temp_reg: good  <- .print("good"); !wait.
 +!temp_reg: not good  <- .print("resting"); !wait.
 
-+!heat <-  	 increase; .wait(200); !temp_reg.
++!heat <-  	 increase; .print("Increase"); .wait(200); !temp_reg.
 +!wait <-  	 .print("resting"); .wait(1000); !temp_reg.
 
 
