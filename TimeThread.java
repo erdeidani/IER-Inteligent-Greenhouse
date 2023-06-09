@@ -4,6 +4,7 @@ public class TimeThread extends Thread {
 	public static int temperature = 0;
 	public static int humidity = 0;
 	public static int time = 0;
+	public static boolean open = false;
 
 	public final static int MAX_TIME = 10;
 
@@ -16,8 +17,7 @@ public class TimeThread extends Thread {
 	private static int MAX_HUMY = 60;
 	private static int MIN_HUMY = 30;
 
-	private Time day = Time.DayTime;;
-	public static boolean open = false;
+	private Time day = Time.DayTime;
 
 	public void run() {
 
