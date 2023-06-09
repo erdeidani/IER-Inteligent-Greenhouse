@@ -1,4 +1,5 @@
 public class TimeThread extends Thread {
+	Frontend frontend;
 
 	public static int water = 0;
 	public static int temperature = 0;
@@ -18,6 +19,11 @@ public class TimeThread extends Thread {
 	private static int MIN_HUMY = 30;
 
 	private Time day = Time.DayTime;
+	
+
+	public TimeThread(Frontend frontend) {
+		this.frontend = frontend;
+	}
 
 	public void run() {
 
@@ -65,7 +71,7 @@ public class TimeThread extends Thread {
 			 //System.out.println("water: " + water);
 			 //System.out.println("temp: " + temperature);
 			
-
+			frontend.updateData();
 		}
 
 	}
