@@ -61,8 +61,8 @@ public class TimeThread extends Thread {
 				day = Time.NightTime;
 				//System.out.println("It's nightTime");
 			}
-			 System.out.println("time: " + time);
-			 System.out.println("water: " + water);
+			 //System.out.println("time: " + time);
+			 //System.out.println("water: " + water);
 			 //System.out.println("temp: " + temperature);
 			
 

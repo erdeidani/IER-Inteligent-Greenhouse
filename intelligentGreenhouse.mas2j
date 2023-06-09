@@ -19,6 +19,6 @@ MAS intelligentGreenhouse {
     agents: 
     		water;
     		master;
-        
-
+			temp;
+			window;
 }

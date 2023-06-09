@@ -1,10 +1,10 @@
 
 !window.
 
-+!window: hot & not open 	<- .print("open"); !open.
-+!window: tooHum & not open <- .print("open"); !open.
-+!window: cold & not tooHum & open <- .print("close"); !close.
-+!window: good & not tooHum & open <- .print("close"); !close.
++!window: hot & not open 	<- .print("open"); .send(master, achieve, signalForOpenWindow).
++!window: tooHum & not open <- .print("open"); .send(master, achieve, signalForOpenWindow).
++!window: cold & not tooHum & open <- .print("close"); .send(master, achieve, signalForOpenWindow).
++!window: good & not tooHum & open <- .print("close"); .send(master, achieve, signalForOpenWindow).
 +!window: true <- .print("wait"); !wait.
 
 +!open <-  	 open; .wait(200); !window.
