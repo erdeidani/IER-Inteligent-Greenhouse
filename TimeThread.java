@@ -43,7 +43,6 @@ public class TimeThread extends Thread {
 				setWater((--water));
 				if (open) {
 					decreaseTemp();
-					System.out.println("HŐMÉRSÉKLET CSÖKKENÉS");
 					setHumidity(humidity - 1);
 				} else {
 					setHumidity(humidity + 2);
@@ -57,13 +56,14 @@ public class TimeThread extends Thread {
 			}
 			if (time <= (MAX_TIME / 2)) {
 				day = Time.DayTime;
-				System.out.println("It's daytime");
+				//System.out.println("It's daytime");
 			} else {
 				day = Time.NightTime;
-				System.out.println("It's nightTime");
+				//System.out.println("It's nightTime");
 			}
-			// System.out.println("time: " + time);
-			// System.out.println("temp: " + temperature);
+			 System.out.println("time: " + time);
+			 System.out.println("water: " + water);
+			 //System.out.println("temp: " + temperature);
 			
 
 		}

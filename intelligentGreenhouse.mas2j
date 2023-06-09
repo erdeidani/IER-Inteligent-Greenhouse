@@ -16,9 +16,9 @@ MAS intelligentGreenhouse {
 
     environment: Example
 
-    agents: window;
-    		temp;
-    		watering;
+    agents: 
+    		water;
+    		master;
         
 
 }
