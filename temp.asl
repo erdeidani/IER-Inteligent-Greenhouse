@@ -11,7 +11,3 @@ open(Open).
 
 +!heat <-  	 increase; .print("Increase"); .wait(200); !temp_reg.
 +!wait <-  	 .print("Resting"); .wait(1000); !temp_reg.
-
-
-//+!temp_reg: hot  <- .print("cool"); !cool.
-//+!cool <-  	 decrease; .wait(200); !temp_reg.

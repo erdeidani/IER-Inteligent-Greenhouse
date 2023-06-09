@@ -48,7 +48,7 @@ public class TimeThread extends Thread {
 			} else { //nighttime
 				setWater((--water));
 				if (open) {
-					decreaseTemp();
+					setTemperature((temperature-2));
 					setHumidity(humidity - 1);
 				} else {
 					setHumidity(humidity + 2);
@@ -62,16 +62,20 @@ public class TimeThread extends Thread {
 			}
 			if (time <= (MAX_TIME / 2)) {
 				day = Time.DayTime;
-				//System.out.println("It's daytime");
 			} else {
 				day = Time.NightTime;
-				//System.out.println("It's nightTime");
 			}
-			 //System.out.println("time: " + time);
-			 //System.out.println("water: " + water);
-			 //System.out.println("temp: " + temperature);
 			
+			System.out.println("-----Environment-------------------");
+			System.out.println("time: " + TimeThread.time + " / " +  TimeThread.MAX_TIME);
+			System.out.println("water: " + water);
+			System.out.println("temp: " + temperature);
+			System.out.println("hum: " + humidity);
+			System.out.println("window: " + TimeThread.open);
+			System.out.println("-----------------------------------");
 			frontend.updateData();
+
+
 		}
 
 	}
@@ -122,7 +126,7 @@ public class TimeThread extends Thread {
 	}
 
 	int increaseWater() {
-		setWater(++water);
+		setWater(water+2);
 		return water;
 	}
 
